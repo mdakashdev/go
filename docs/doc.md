@@ -14,7 +14,22 @@ https://gin-gonic.com/
 5. GET /about API তৈরি করবে।
 
 
-    
+Concept	     কাজ
+func	     Function তৈরি
+string	     String data type
+return	     Value return
+struct	     Custom data structure
+json tag	 JSON field name define
+json.NewEncoder()	JSON response encode
+map	         Key-value data structure
+
+
+Step 2: Understand Function
+Step 3: What is Struct?
+Step 4: Create JSON Response
+Step 5: Build Our First JSON API
+Step 6: Test API
+
 
 # Done
 
