@@ -18,6 +18,7 @@ type Worker struct {
     Name string `json:"name"`
     Email string `json:"email"`
     Position string `json:"position"`
+    Department string `json:"dept"`
 }
 
 func workerHandler(w http.ResponseWriter, r *http.Request) {
@@ -26,6 +27,7 @@ func workerHandler(w http.ResponseWriter, r *http.Request) {
         Name:     "Akash",
         Email:    "akash@example.com",
         Position: "Software Engineer",
+        Department: "Engineering",
     }
 
     w.Header().Set("Content-Type", "application/json")
@@ -45,7 +47,17 @@ func healthHandler(w http.ResponseWriter, r *http.Request) {
     json.NewEncoder(w).Encode(response)
 }
 
+func aboutHandler(w http.ResponseWriter, r *http.Request) {
+    response := map[string]string{
+        "company": "Softzion",
+        "language": "Golang",
+        "type": "Backend Development",
+    }
 
+    w.Header().Set("Content-Type", "application/json")
+
+    json.NewEncoder(w).Encode(response)
+}
 
 func sayHello() string {
     return "Welcome to Go Backend"
@@ -71,9 +83,9 @@ func main() {
 
     http.HandleFunc("/health", healthHandler)
 
-    http.HandleFunc("/about", func(w http.ResponseWriter, r *http.Request) {
-        fmt.Fprintln(w, "Welcome to Go Backend Development!")
-    })
+    http.HandleFunc("/about", aboutHandler)
+
+
 
     fmt.Println("Server running on port 8080")
 

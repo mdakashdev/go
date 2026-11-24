@@ -39,3 +39,11 @@ Step 6: Test API
 [x] Hello Akash program চালিয়েছি
 [x] GET /health API চালিয়েছি
 [x] GET /about API নিজে তৈরি করেছি
+
+Day-2
+[x] Function বুঝেছি
+[x] Function return value বুঝেছি
+[x] Struct তৈরি করতে পেরেছি
+[x] JSON Struct Tag বুঝেছি
+[x] JSON API তৈরি করেছি
+[x] Practice Task সম্পন্ন করেছি
