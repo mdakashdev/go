@@ -7,7 +7,11 @@ import (
 
 func main() {
     http.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
-        fmt.Fprintln(w, "Hello Go")
+        fmt.Fprintln(w, "Server is healthy!")
+    })
+
+    http.HandleFunc("/about", func(w http.ResponseWriter, r *http.Request) {
+        fmt.Fprintln(w, "Welcome to Go Backend Development!")
     })
 
     fmt.Println("Server running on port 8080")
